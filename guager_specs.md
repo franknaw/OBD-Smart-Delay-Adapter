@@ -26,29 +26,17 @@ The design priorities are:
 ```mermaid
 flowchart LR
 
-OBD[OBD-II Connector]
-
-OBD --> FUSE[1A Fuse]
-
-FUSE --> RPMOS[Reverse Polarity Protection]
-
-RPMOS --> TVS12[12V TVS Protection]
-
-TVS12 --> FILTER[LC Input Filter]
-
-FILTER --> BUCK[12V → 5V Buck Converter]
-
-BUCK --> ESP32[ESP32-S3]
-
-OBD --> CANTVS[CAN Protection (SM712)]
-
-CANTVS --> CAN[MCP2562 CAN Transceiver]
-
-CAN --> ESP32
-
-ESP32 --> BLE[Bluetooth LE]
-
-BLE --> PHONE[Mobile Application]
+OBD["OBD-II Connector"]
+FUSE["1A Fuse"]
+RPMOS["Reverse Polarity Protection"]
+TVS12["12V TVS Protection"]
+FILTER["LC Input Filter"]
+BUCK["12V to 5V Buck Converter"]
+ESP32["ESP32-S3"]
+CANTVS["CAN Protection (SM712)"]
+CAN["MCP2562 CAN Transceiver"]
+BLE["Bluetooth LE"]
+PHONE["Mobile Application"]
 ```
 
 ---
