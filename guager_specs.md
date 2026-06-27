@@ -37,6 +37,22 @@ CANTVS["CAN Protection (SM712)"]
 CAN["MCP2562 CAN Transceiver"]
 BLE["Bluetooth LE"]
 PHONE["Mobile Application"]
+
+BD --> FUSE
+FUSE --> RPMOS
+RPMOS --> TVS12
+TVS12 --> FILTER
+FILTER --> BUCK
+BUCK --> ESP32
+
+OBD --> CANTVS
+CANTVS --> CAN
+CAN --> ESP32
+
+ESP32 --> BLE
+BLE --> PHONE
+
+
 ```
 
 ---
